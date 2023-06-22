@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --fs-heading: 4rem;
+  --fs-body: 2rem;
+  
+
+  --ff-body: 'Staatliches', cursive;
+  --ff-p:'Palanquin', sans-serif;
+
+  --bg-heading: #8E9AAF;
+  --bg-heading-top:#CBC0D3;
+  --bg-main: #EFF1FF;
+  --bg-card: #FEEAFA;
+
+  --fc-secundary: #FFFFFF;
+  --fc-secundary-dark: #23053A;
+  --fc-secundary-dark01: #4A4E69;
+
+}
+
+body {
+  background-color: var(--bg-main);
+  font-family: var(--ff-body);
+
+}
+
+body::before {
+   content: '';
+   width: 100%;
+   height: 27.9rem;
+
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   background-color: var(--bg-heading);
+}
+
+.page {
+  width: 38.4rem ;
+  margin: 0 auto;
+}
+
+header {
+  width: 38.4rem ;
+  margin-top: 3.2rem;
+
+  text-align: center;
+}
+
+header img {
+
+  margin-bottom: 4rem;
+
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+  
+}
+
+.top {
+  
+  content: '';
+   width: 100%;
+   height: 4.9rem;
+
+   position: absolute;
+   top: 20.1rem;
+   left: 0;
+   z-index: -1;
+   background-color: var(--bg-heading-top);
+
+   
+   padding: 8px 8.7rem;
+
+}
+
+.top h1 {
+  color: var(--fc-secundary);
+
+  font-weight: 400;
+  font-size: var(--fs-heading);
+  line-height: 3.4rem;
+
+  letter-spacing: 0.05em;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+main {
+
+  margin-top: 5rem;
+  width: 32rem;
+  padding: 1.4rem 3.2rem 6rem;
+}
+
+main p {
+font-family: var(--ff-p);
+font-weight: 400;
+font-size: 2rem;
+line-height: 1.5rem;
+
+display: flex;
+align-items: center;
+text-align: center;
+color: var(--fc-secundary-dark);
+width: 30.5rem;
+margin-bottom: 6.3rem;
+
+}
+
+main {
+display: grid;
+gap: 3.6rem;
+}
+
+.card {
+  position: relative;
+  font-family: var(--ff-body);
+}
+
+.card img {
+  animation: downtop 2000ms;
+  transition: all 200ms;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.card h2 {
+
+  position: absolute;
+  top: 1.6rem;
+  left: 18.4rem;
+
+  background-color: var(--bg-card);
+  color: var(--fc-secundary-dark01);
+  font-family: var(--fs-body);
+
+  border-radius: 2rem;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+
+  width:11.2rem;
+  height: 3.5rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  animation: topdown 2000ms;
+
+
+}
+
+@keyframes topdown {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-15px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+}
+
+@keyframes downtop {
+
+  0% {
+    opacity: 0;
+    transform: translateY(15px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+}
